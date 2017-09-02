@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+$yellow :#ffcc00;
+
+$text-color :#666666;
+
+*{
+	box-sizing: border-box;
+	transition: all .25s linear;
+}
+
+html, body{
+	height: 100%;
+
+}
+
+body{
+	/*padding:100px 0 90px 0;*/
+}
+
+.container{
+	width: 1140px;
+	margin:0 auto;
+
+
+.team {
+	text-align: center;
+	&__title {
+		color: $yellow;
+		font-size: 60px;
+		text-transform: uppercase;
+		margin-top: 0;
+		position: relative;
+
+		&:after, &:before{
+			content:url(../img/bonfire-icon.png);
+			position: absolute;
+			bottom: -40px;left: 50%;
+			transform: translate(-50%, 0);
+			background-color: #fff;
+			display: inline-block;
+			padding: 0 10px;
+			font-size: 0;
+
+		}
+		&:before {
+			content: "";
+			width: 460px;
+			border-bottom: 1px solid $yellow; 
+			bottom: -30px;
+		}
+
+	}
+	&__subtitle{
+		color: #898f8f;
+		text-transform: uppercase;
+		font-size: 18px;
+	}
+}
+
+.item{
+	width: 1140px;
+	height: 560px;
+	font-size: 0;
+	margin-top: 80px;
+
+	&__photo{
+		width: 50%;
+		height: 100%;
+		display: inline-block;
+		border-right: 1px solid $yellow;
+		position: relative;
+		vertical-align: top;
+		&:before {
+		content:url(../img/front.png);
+		position: absolute;
+		top: 45%;left: 5%;
+
+		}
+
+		&_wrap{
+			width: 380px;
+			border:1px solid $yellow;
+			display: block;
+			margin: 70px auto 0;
+			position: relative;
+			/*vertical-align: middle;*/
+
+
+			&-img{
+				width: 100%;
+			}
+
+			.wrap__border{
+				width: 105px;
+				height:105px;
+				border:1px solid $yellow;
+				position: absolute;
+			}
+
+			.wrap__border_lt{
+				top: -3%;left:-3%;
+				border-bottom: none;
+				border-right: none;
+	
+			}
+
+			.wrap__border_rt{
+				top:-3%;right: -3%;
+				border-bottom: none;
+				border-left: none;
+			}
+			
+			.wrap__border_bl{
+				bottom: -3%;left: -3%;
+				border-top: none;
+				border-right: none;
+			}
+
+			.wrap__border_br{
+				bottom: -3%;right: -3%;
+				border-top: none;
+				border-left: none;
+			}
+
+		}
+	}
+
+	&__info{
+		width: 49%;
+		height: 100%;
+		display: inline-block;
+		color:$text-color;
+		text-align: center;
+		vertical-align: top;
+		font-family: 'Raleway', sans-serif;
+
+		&_wrap{
+
+			/*vertical-align: middle;*/
+			margin:65px auto 0;
+			position: relative;
+			&:after{
+				content:url(../img/back.png);
+				position: absolute;
+				bottom: 45%; right:5%;
+			}
+		}
+
+		&_name{
+			text-align: center;
+			font-size: 36px;
+			margin-top: 0;
+	
+		
+
+		}
+
+		&_biz{
+			font-size: 24px;
+			margin-bottom: 30px;
+			/*color: #666666;*/
+		}
+
+		&_socials{
+			/*display: inline-block;*/
+			width: 200px;
+			margin:0 auto;
+			padding-left: 0;
+			li {
+				display: inline-block;
+				margin: 3px;
+			}
+
+			.info__social{
+				display:block;
+				width: 30px;
+				height: 30px;
+				border: 2px solid #cccccc;
+				border-radius: 50%;
+				background-repeat: no-repeat;
+				background-position: center;
+				/*background-size: 50%;*/
+
+				&_fb{
+					background-image: url(../img/fb.png);
+				}
+				&_twitter{
+					background-image: url(../img/twitter.png);
+				}
+				&_google{
+					background-image: url(../img/google.png);
+				}
+				&_in{
+					background-image: url(../img/in.png);
+				}
+			}
+		}
+
+		&_desc{
+			padding: 0 80px 0 80px;
+			font-size: 14px;
+			overflow: hidden;
+			margin-top: 30px;
+			margin-bottom: 30px;
+
+			&:after{
+				content:url(../img/drop-line.png);
+				display: block;
+				margin-top: 15px;
+			}
+
+		}
+		&_btn{
+			display: inline-block;
+			border: 1px solid $yellow;
+			/*background-color: transparent;*/
+			text-transform: uppercase;
+			padding:3px 10px;
+			font-size: 14px;
+			font-family: 'Open Sans', sans-serif;
+			text-decoration: none;
+			color: $text-color;
+			font-weight: 700;
+			&:hover{
+				background-color:$yellow;
+				color: #fff;
+			}
+
+
+		}
+	}
+	}
+	.galary{
+		width: 100px;
+		margin: 0 auto;
+		padding-left: 10px;
+		text-align: center;
+		margin-bottom: 90px;
+		margin-top: 40px;
+		li{
+			display: inline-block;
+		}
+
+		&__list{
+			display:block;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: $yellow;
+			margin-right: 10px;
+			
+			&:hover{
+				background-color:#fff;
+				border:1px solid $yellow;
+			}
+		}
+	}
+
+
+}
