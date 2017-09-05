@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
 $yellow :#ffcc00;
 
 $text-color :#666666;
@@ -21,6 +22,7 @@ body{
 .container{
 	width: 1140px;
 	margin:0 auto;
+	padding: 20px;
 
 
 .team {
@@ -28,6 +30,8 @@ body{
 	&__title {
 		color: $yellow;
 		font-size: 60px;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 900;
 		text-transform: uppercase;
 		margin-top: 0;
 		position: relative;
@@ -55,41 +59,46 @@ body{
 		color: #898f8f;
 		text-transform: uppercase;
 		font-size: 18px;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 400;
+		margin-top: 0;
 	}
 }
 
 .item{
-	width: 1140px;
-	height: 560px;
+	// display: flex;
+	// aiign-items:center;
+	width:100%;
+	height: 420px;
 	font-size: 0;
-	margin-top: 80px;
+	margin-top: 50px;
 
 	&__photo{
+		font-size: 0;
 		width: 50%;
 		height: 100%;
 		display: inline-block;
 		border-right: 1px solid $yellow;
 		position: relative;
-		vertical-align: top;
-		&:before {
-		content:url(../img/front.png);
-		position: absolute;
-		top: 45%;left: 5%;
+		// vertical-align: top;
+		// &:before {
+		// content:url(../img/front.png);
+		// position: absolute;
+		// top: 45%;left: 5%;
 
-		}
+		// }
 
-		&_wrap{
-			width: 380px;
+		&-wrap{
+			width: 66%;
+			// max-height: 330px;
 			border:1px solid $yellow;
-			display: block;
-			margin: 70px auto 0;
+			display: inline-block;
+			margin-top: 20px;
 			position: relative;
-			/*vertical-align: middle;*/
+			vertical-align: middle;
 
 
-			&-img{
-				width: 100%;
-			}
+			
 
 			.wrap__border{
 				width: 105px;
@@ -125,9 +134,15 @@ body{
 
 		}
 	}
+	&__img{
+		width: 100%;
+		height: auto;
+		max-height: 361px;
+	}
 
 	&__info{
-		width: 49%;
+		width: 50%;
+		// margin: auto;
 		height: 100%;
 		display: inline-block;
 		color:$text-color;
@@ -135,35 +150,43 @@ body{
 		vertical-align: top;
 		font-family: 'Raleway', sans-serif;
 
-		&_wrap{
+		&-wrap{
 
-			/*vertical-align: middle;*/
-			margin:65px auto 0;
-			position: relative;
-			&:after{
-				content:url(../img/back.png);
-				position: absolute;
-				bottom: 45%; right:5%;
-			}
+			vertical-align: middle;
+			display: inline-block;
+			width: 70%;
+			margin-left:70px;
+			// &:after{
+			// 	content:url(../img/back.png);
+			// 	position: absolute;
+			// 	bottom: 45%; right:5%;
+			// }
 		}
 
-		&_name{
+		&-name{
 			text-align: center;
 			font-size: 36px;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 900;
 			margin-top: 0;
+			max-height: 43px;
+			overflow: hidden;
 	
 		
 
 		}
 
-		&_biz{
+		&-biz{
 			font-size: 24px;
+			font-weight: 400;
 			margin-bottom: 30px;
+			max-height: 29px;
+			overflow: hidden;
 			/*color: #666666;*/
 		}
 
-		&_socials{
-			/*display: inline-block;*/
+		&-socials{
+			display: inline-block;
 			width: 200px;
 			margin:0 auto;
 			padding-left: 0;
@@ -197,12 +220,14 @@ body{
 			}
 		}
 
-		&_desc{
-			padding: 0 80px 0 80px;
+		&-desc{
+			// padding: 0 80px 0 80px;
 			font-size: 14px;
 			overflow: hidden;
 			margin-top: 30px;
 			margin-bottom: 30px;
+			max-height: 127px;
+			overflow: hidden;
 
 			&:after{
 				content:url(../img/drop-line.png);
@@ -211,7 +236,7 @@ body{
 			}
 
 		}
-		&_btn{
+		&-btn{
 			display: inline-block;
 			border: 1px solid $yellow;
 			/*background-color: transparent;*/
@@ -230,14 +255,24 @@ body{
 
 		}
 	}
+	&__slide{
+		img{
+			width: 50%;
+		}
+		width: 5%;
+		display: inline-block;
+		vertical-align: middle;
+		margin:20px;
 	}
-	.galary{
+	}
+
+	.gallery{
 		width: 100px;
 		margin: 0 auto;
 		padding-left: 10px;
 		text-align: center;
-		margin-bottom: 90px;
-		margin-top: 40px;
+		// margin-bottom: 20px;
+		margin-top: 20px;
 		li{
 			display: inline-block;
 		}
@@ -256,6 +291,6 @@ body{
 			}
 		}
 	}
-
-
 }
+
+
